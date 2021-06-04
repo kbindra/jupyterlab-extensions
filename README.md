@@ -29,4 +29,4 @@ jlpm run build
 
 # start JupyterLab
 jupyter lab
-```bash
+```
