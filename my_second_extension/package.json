@@ -45,12 +45,18 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@jupyterlab/application": "^3.0.0",
     "@lumino/widgets": "1.23.0",
-    "axios": "0.21.1"
+    "@types/randomcolor": "^0.5.5",
+    "axios": "0.21.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "randomcolor": "^0.6.2"
   },
   "devDependencies": {
     "@jupyterlab/builder": "^3.0.0",
+    "@types/react-dom": "^17.0.6",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
     "eslint": "^7.14.0",

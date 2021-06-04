@@ -1,0 +1,84 @@
+hr {
+  border: 1px solid #d3d3d3;
+  width: 90%;
+}
+
+ul {
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  list-style-type: none;
+  margin-top: 5px;
+}
+
+ul li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 0;
+}
+
+.container {
+  background-color: #ffffff;
+  margin-top: 4vh;
+  box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.6);
+  height: 100%;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px lightgray;
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: lightgrey;
+  border-radius: 10px;
+}
+
+.header {
+  display: flexbox;
+  padding: 8px 20px;
+  height: 3vh;
+}
+
+.left-header {
+  float: left;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.right-header {
+  float: right;
+  color: dodgerblue;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding-left: 15px;
+}
+
+.reload {
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.reload:hover {
+  transform: scale(1.06, 1.06);
+  transition: transform 0.3s ease-in;
+}
+
+.log-card {
+  margin: 15px 5px;
+  padding: 8px 8px;
+  border-radius: 8px;
+  min-height: 15vh;
+  max-height: 40vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px;
+}
+
+.log-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
