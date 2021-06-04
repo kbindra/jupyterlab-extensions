@@ -1,6 +1,8 @@
 # jupyterlab-extensions
 
 ## Installation steps
+
+```bash
 # clone the repository
 git clone https://github.com/kbindra/jupyterlab-extensions.git
 
@@ -27,3 +29,4 @@ jlpm run build
 
 # start JupyterLab
 jupyter lab
+```bash
