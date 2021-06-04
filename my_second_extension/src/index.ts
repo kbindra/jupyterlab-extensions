@@ -4,8 +4,9 @@ import {
   ILabShell
 } from '@jupyterlab/application';
 
+import {runIcon} from './icon';
 import { Widget } from "@lumino/widgets";
-import { FetchActiveRuns } from './data_handler';
+import axios from 'axios';
 
 /**
  * Initialization data for the my_second_extension extension.
@@ -18,21 +19,24 @@ const extension: JupyterFrontEndPlugin<void> = {
     console.log('JupyterLab extension my_panel_extension is activated!');
     const widget = new Widget();
     widget.id = "@jupyterlab-panel/runs";
-    widget.title.iconClass = "jp-SpreadsheetIcon jp-SideBar-tabIcon";
+    widget.title.icon = runIcon;
     widget.title.caption = "Mlflow Track Runs";
+    
+    axios.get('http://localhost:5002/getruns',).then(resp => {
+      console.log(resp.data);
+    }).catch(error => {
+      console.log(error)
+    })
 
-    let summary = document.createElement('div');
+    let summary = document.createElement('p');
+    summary.innerText = "hello world"
     summary.style.backgroundColor = 'white';
     widget.node.appendChild(summary);
     
-    const data = new FetchActiveRuns();
-    data.getruns();
-    const response_data = data.responseData;
-    console.log(response_data)
     // try {
     //   var list = document.createElement('ul');
     //   if(data !== null){
-    //       for(let i=0;i<data.runs.length;i++){
+    //       for(let i=0;i<Object.keys(data[0]).length;i++){
     //         let runs_items = document.createElement('li');
     //         runs_items.appendChild(document.createTextNode(data[i].params[0].key));
     //         list.appendChild(runs_items);
